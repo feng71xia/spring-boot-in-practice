@@ -1,6 +1,6 @@
 package com.manning.sbip.ch06.model;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

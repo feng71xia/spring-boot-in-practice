@@ -1,6 +1,6 @@
 package com.manning.sbip.ch04.model;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "CT_USERS")

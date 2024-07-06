@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.validation.FieldError;
@@ -26,13 +27,13 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 	}
 	
 	@Override
-	public ResponseEntity<Object> handleHttpMessageNotReadable(HttpMessageNotReadableException ex, HttpHeaders headers, HttpStatus status, WebRequest request) {
+	public ResponseEntity<Object> handleHttpMessageNotReadable(HttpMessageNotReadableException ex, HttpHeaders headers, HttpStatusCode status, WebRequest request) {
 		 return new ResponseEntity<>(ex.getMessage(), headers, HttpStatus.BAD_REQUEST);
 	}
 	
 	@Override
 	protected ResponseEntity<Object> handleMethodArgumentNotValid(
-			MethodArgumentNotValidException methodArgumentNotValidException, HttpHeaders headers, HttpStatus status, WebRequest request) {
+			MethodArgumentNotValidException methodArgumentNotValidException, HttpHeaders headers, HttpStatusCode status, WebRequest request) {
 		Map<String, String> errors = new HashMap<>();
 		methodArgumentNotValidException.getBindingResult().getAllErrors().forEach((error) -> {
 	        String fieldName = ((FieldError) error).getField();

@@ -2,8 +2,8 @@ package com.manning.sbip.ch05.model;
 
 import lombok.Data;
 
-import javax.persistence.*;
-import javax.validation.constraints.*;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
 
 @Entity
 @Data

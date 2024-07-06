@@ -1,6 +1,6 @@
 package com.manning.sbip.ch02.model;
 
-import javax.validation.constraints.*;
+import jakarta.validation.constraints.*;
 
 public class Course {
 

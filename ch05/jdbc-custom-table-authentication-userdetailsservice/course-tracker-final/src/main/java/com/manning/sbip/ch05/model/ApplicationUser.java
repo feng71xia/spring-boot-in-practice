@@ -2,7 +2,7 @@ package com.manning.sbip.ch05.model;
 
 import lombok.Data;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "CT_USERS")

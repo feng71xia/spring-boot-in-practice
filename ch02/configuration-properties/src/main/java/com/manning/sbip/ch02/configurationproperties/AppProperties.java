@@ -3,10 +3,8 @@ package com.manning.sbip.ch02.configurationproperties;
 import java.util.List;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.ConstructorBinding;
 import org.springframework.boot.context.properties.bind.DefaultValue;
 
-@ConstructorBinding
 @ConfigurationProperties("app.sbip.ct")
 public class AppProperties {
 	
